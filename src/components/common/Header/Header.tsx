@@ -4,7 +4,7 @@ import "./Header.scss";
 export default function Header() {
     return (
         <header className="header">
-            <div className="header-container container">
+            <div className="header-container holder">
                 <div className="header-left">
                     <a className="header-logo" href="/">
                         <img src="https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/cropped-Group-39@2x.png" alt="logo" />

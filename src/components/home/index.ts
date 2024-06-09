@@ -1,0 +1,10 @@
+export { default as Hero } from "./Hero";
+export { default as Services } from "./Services";
+export { default as Missions } from "./Missions";
+export { default as Projects } from "./Projects";
+export { default as WhatWeDo } from "./WhatWeDo";
+export { default as Pricing } from "./Pricing";
+export { default as Testimonial } from "./Testimonial";
+export { default as Blog } from "./Blog";
+export { default as Contact } from "./Contact";
+export { default as Footer } from "./Footer";
