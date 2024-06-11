@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import { IProject, PROJECTS } from "../../constances";
 import { Line } from "../ui";
 
@@ -9,12 +11,23 @@ export default function Projects() {
         {/* Left */}
         <div className="lg:w-2/6 flex flex-col gap-4 sm:gap-8">
           <Line />
-          <h1 className="text-2xl sm:text-5xl">Our recent <span className="text-green-700">web designs</span> & some examples of past <span className="text-green-700">projects</span></h1>
+          <motion.h1
+          className="text-2xl sm:text-5xl"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1,  transition: { delay: 0 }}}
+          >Our recent <span className="text-green-700">web designs</span> & some examples of past <span className="text-green-700">projects</span>
+          </motion.h1>
           <Line />
         </div>
         {/* Right */}
         <div className="lg:w-4/6 flex flex-col lg:items-end lg:justify-end gap-4 lg:gap-8">
-          <p className="max-w-[60ch] text-xs sm:text-sm opacity-70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reprehenderit iure consequuntur maxime porro, quis debitis dolorem facilis excepturi accusantium fugiat saepe. In atque, maxime, nam minima architecto sequi ratione aspernatur ad sapiente quas quae veritatis neque alias a ipsa cum sunt beatae fugiat obcaecati reprehenderit! Deleniti, dolorum itaque!</p>
+          <motion.p
+            className="max-w-[60ch] text-xs sm:text-sm opacity-70"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1,  transition: { delay: 0.5 }}}
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur reprehenderit iure consequuntur maxime porro, quis debitis dolorem facilis excepturi accusantium fugiat saepe. In atque, maxime, nam minima architecto sequi ratione aspernatur ad sapiente quas quae veritatis neque alias a ipsa cum sunt beatae fugiat obcaecati reprehenderit! Deleniti, dolorum itaque!
+          </motion.p>
         </div>
       </div>
 
@@ -28,7 +41,12 @@ export default function Projects() {
 
 function ProjectCard(props: IProject) {
   return (
-    <div className="w-full aspect-square bg-white bg-cover rounded-lg overflow-hidden shadow-md" style={{backgroundImage: `url('${props.img}')`}}>
-    </div>
+    <motion.div
+      className="w-full aspect-square bg-white bg-cover rounded-lg overflow-hidden shadow-md"
+      style={{backgroundImage: `url('${props.img}')`}}
+      initial={{ x: -100, y: -100, opacity: 0 }}
+      whileInView={{ x: 0, y:0, opacity: 1,  transition: { delay: 0.5 }}}
+    >
+    </motion.div>
   )
 }

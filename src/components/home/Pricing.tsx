@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import { IPricing, PRICING } from "../../constances";
 import { Line } from "../ui";
 import { BiCheck } from "react-icons/bi"
@@ -8,15 +10,25 @@ export default function Pricing() {
       <div className="holder flex flex-col lg:flex-row gap-8">
         {/* Left */}
         <div className="lg:w-2/6 text-center lg:text-left flex flex-col items-center lg:items-start gap-4 sm:gap-8">
-          <h1 className="max-w-[10ch] text-2xl sm:text-5xl">
+          <motion.h1
+            className="max-w-[10ch] text-2xl sm:text-5xl"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1,  transition: { delay: 0 }}}
+          >
             What <br/>
             <span className="text-green-700">
               Live Chat<br/>24/7
             </span>
             Support
-          </h1>
+          </motion.h1>
           <Line />
-          <p className="max-w-[60ch] text-xs sm:text-sm opacity-70">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ducimus dicta in quos placeat possimus sunt nulla nesciunt nam expedita! Dicta corrupti, eveniet blanditiis officia omnis consequatur laboriosam rem dolorem!</p>
+          <motion.p
+            className="max-w-[60ch] text-xs sm:text-sm opacity-70"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1,  transition: { delay: 0.5 }}}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus ducimus dicta in quos placeat possimus sunt nulla nesciunt nam expedita! Dicta corrupti, eveniet blanditiis officia omnis consequatur laboriosam rem dolorem!
+          </motion.p>
         </div>
 
         {/* Right */}
@@ -30,7 +42,11 @@ export default function Pricing() {
 
 function PricingCard(props: IPricing) {
   return (
-    <div className={`max-w-md w-full border-b-4 rounded-3xl ${props.type === "primary" ? "border-green-700": "border-gray-900"} overflow-hidden shadow-2xl`}>
+    <motion.div
+      className={`max-w-md w-full border-b-4 rounded-3xl ${props.type === "primary" ? "border-green-700": "border-gray-900"} overflow-hidden shadow-2xl`}
+      initial={{ x: 100, y:100, opacity: 0 }}
+      whileInView={{ x: 0,y:0, opacity: 1,  transition: { delay: 0.5 }}}
+    >
       <div className={`py-6 ${props.type === "primary" ? "gradient-green": "gradient-black"}`}>
         <div className="p-4 text-center bg-white">
           <h1 className="font-semibold text-xl sm:text-2xl uppercase">{props.name}</h1>
@@ -54,6 +70,6 @@ function PricingCard(props: IPricing) {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }

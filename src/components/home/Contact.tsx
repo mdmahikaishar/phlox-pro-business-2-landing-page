@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import { Button } from "../ui";
 
 export default function Contact() {
@@ -29,13 +31,28 @@ interface IContact {
 
 function ContactCard(props: IContact) {
   return (
-    <div className={`w-full px-8 py-16 flex flex-col items-center justify-center ${props.variant === "primary" ? `gradient-green my-shadow-green`: `gradient-black my-shadow-black `}} bg-cover gap-2 sm:gap-4 rounded-3xl`}>
-      <p className="text-center font-semibold text-sm sm:text-base text-white/50">{props.des}</p>
-      <h1 className="mb-4 sm:mb-8 text-center font-semibold text-2xl sm:text-4xl text-white">{props.name}</h1>
+    <motion.div
+      className={`w-full px-8 py-16 flex flex-col items-center justify-center ${props.variant === "primary" ? `gradient-green my-shadow-green`: `gradient-black my-shadow-black `}} bg-cover gap-2 sm:gap-4 rounded-3xl`}
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1,  transition: { delay: 0 }}}
+    >
+      <motion.p className="text-center font-semibold text-sm sm:text-base text-white/50"
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1,  transition: { delay: 0.5 }}}
+      >
+      {props.des}</motion.p>
+      <motion.h1 className="mb-4 sm:mb-8 text-center font-semibold text-2xl sm:text-4xl text-white"
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1,  transition: { delay: 0.75 }}}
+      >
+        {props.name}</motion.h1>
 
-      <div className="w-full flex items-center justify-center">
+      <motion.div className="w-full flex items-center justify-center"
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1,  transition: { delay: 1 }}}
+      >
         {props.children}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }

@@ -1,10 +1,10 @@
+import React from "react";
 import { Header } from "../components/common";
 import { Blog, Contact, Footer, Hero, Missions, Pricing, Projects, Services, Testimonial, WhatWeDo } from "../components/home";
 
-export default function HomePage() {
-
+export default function Home() {
   return (
-    <div className="flex flex-col gap-32">
+    <div className="flex flex-col gap-32 overflow-x-hidden">
       <Header />
       <Hero />
       <Services />
@@ -17,5 +17,5 @@ export default function HomePage() {
       <Contact />
       <Footer />
     </div>
-  )
+  );
 }

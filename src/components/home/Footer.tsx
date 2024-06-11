@@ -1,20 +1,25 @@
+"use client";
 import React from "react";
 import { BiLogoFacebook, BiLogoPinterest, BiLogoTwitter } from "react-icons/bi";
 import { Line } from "../ui";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
     <section className="">
       <div className="py-20 holder grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-4">
-        <div className="">
-          <div className="mb-16">
+        <motion.div className=""
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1,  transition: { delay: 0.5 }}}
+        >
+          <div className="mb-10">
             <a className="header-logo" href="/">
               <img src="https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/05/cropped-Group-39@2x.png" alt="logo" />
             </a>
           </div>
 
           <p className="max-w-[50ch] text-sm opacity-70">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque aut dicta a architecto, eligendi minima assumenda quia officia debitis vel necessitatibus! Cumque esse illum enim error optio velit corporis dolor?</p>
-        </div>
+        </motion.div>
 
         <FooterCard name="Quick Link">
           <div className="flex flex-col gap-2">
@@ -55,13 +60,16 @@ export default function Footer() {
 
 function FooterCard(props: {name: string, children: React.ReactNode}) {
   return (
-    <div className="flex flex-col gap-2 sm:gap-4">
+    <motion.div className="flex flex-col gap-2 sm:gap-4"
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1,  transition: { delay: 0.5 }}}
+    >
       <div className="mb-4 flex flex-col gap-2 sm:gap-4">
         <h2 className="font-semibold text-2xl">{props.name}</h2>
         <Line />
       </div>
 
       {props.children}
-    </div>
+    </motion.div>
   )
 }

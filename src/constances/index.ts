@@ -17,7 +17,7 @@ export const HERO: IHero[] = [
     highlight: "Agency",
     des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum officiis quae provident quia sint aperiam ea vel distinctio, quod sit harum deserunt laborum quisquam? Enim modi non aliquid eaque laborum cupiditate architecto et distinctio sint amet, minima libero expedita nisi. Sequi ducimus fuga cum? Minima nisi quidem obcaecati excepturi officiis!",
     button: "Read More",
-    img: "/vite.svg",
+    img: "/img1-822x822.jpg",
   },
   {
     name: "17 years of experience",
@@ -25,7 +25,7 @@ export const HERO: IHero[] = [
     highlight: "Agency",
     des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum officiis quae provident quia sint aperiam ea vel distinctio, quod sit harum deserunt laborum quisquam? Enim modi non aliquid eaque laborum cupiditate architecto et distinctio sint amet, minima libero expedita nisi. Sequi ducimus fuga cum? Minima nisi quidem obcaecati excepturi officiis!",
     button: "Read More",
-    img: "/vite.svg",
+    img: "/img1-822x822.jpg",
   },
   {
     name: "17 years of experience",
@@ -33,7 +33,7 @@ export const HERO: IHero[] = [
     highlight: "Agency",
     des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum officiis quae provident quia sint aperiam ea vel distinctio, quod sit harum deserunt laborum quisquam? Enim modi non aliquid eaque laborum cupiditate architecto et distinctio sint amet, minima libero expedita nisi. Sequi ducimus fuga cum? Minima nisi quidem obcaecati excepturi officiis!",
     button: "Read More",
-    img: "/vite.svg",
+    img: "/img1-822x822.jpg",
   }
 ]
 
