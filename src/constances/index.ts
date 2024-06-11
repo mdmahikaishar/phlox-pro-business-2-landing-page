@@ -17,7 +17,7 @@ export const HERO: IHero[] = [
     highlight: "Agency",
     des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum officiis quae provident quia sint aperiam ea vel distinctio, quod sit harum deserunt laborum quisquam? Enim modi non aliquid eaque laborum cupiditate architecto et distinctio sint amet, minima libero expedita nisi. Sequi ducimus fuga cum? Minima nisi quidem obcaecati excepturi officiis!",
     button: "Read More",
-    img: "/abc.jpg",
+    img: "/vite.svg",
   },
   {
     name: "17 years of experience",
@@ -25,7 +25,7 @@ export const HERO: IHero[] = [
     highlight: "Agency",
     des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum officiis quae provident quia sint aperiam ea vel distinctio, quod sit harum deserunt laborum quisquam? Enim modi non aliquid eaque laborum cupiditate architecto et distinctio sint amet, minima libero expedita nisi. Sequi ducimus fuga cum? Minima nisi quidem obcaecati excepturi officiis!",
     button: "Read More",
-    img: "/abc.jpg",
+    img: "/vite.svg",
   },
   {
     name: "17 years of experience",
@@ -33,7 +33,7 @@ export const HERO: IHero[] = [
     highlight: "Agency",
     des: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum officiis quae provident quia sint aperiam ea vel distinctio, quod sit harum deserunt laborum quisquam? Enim modi non aliquid eaque laborum cupiditate architecto et distinctio sint amet, minima libero expedita nisi. Sequi ducimus fuga cum? Minima nisi quidem obcaecati excepturi officiis!",
     button: "Read More",
-    img: "/abc.jpg",
+    img: "/vite.svg",
   }
 ]
 
@@ -55,14 +55,14 @@ export interface IProject {
 }
 
 export const PROJECTS: IProject[] = [
-  { img: "/abc.jpg" },
-  { img: "/abc.jpg" },
-  { img: "/abc.jpg" },
-  { img: "/abc.jpg" },
-  { img: "/abc.jpg" },
-  { img: "/abc.jpg" },
-  { img: "/abc.jpg" },
-  { img: "/abc.jpg" },
+  { img: "/vite.svg" },
+  { img: "/vite.svg" },
+  { img: "/vite.svg" },
+  { img: "/vite.svg" },
+  { img: "/vite.svg" },
+  { img: "/vite.svg" },
+  { img: "/vite.svg" },
+  { img: "/vite.svg" },
 ]
 
 export const WHAT_WE_DO: string[] = [
@@ -132,7 +132,7 @@ export interface IBlog {
 }
 
 export const BLOG: IBlog[] = [
-  { name: "Marketing", date: "May 24, 2018", img: "/abc.jpg", userName: "Alex"},
-  { name: "Rest Durning Working Hour", date: "May 24, 2018", img: "/abc.jpg", userName: "Alex"},
-  { name: "Develop Your Startup Idea", date: "May 24, 2018", img: "/abc.jpg", userName: "Alex"},
+  { name: "Marketing", date: "May 24, 2018", img: "/vite.svg", userName: "Alex"},
+  { name: "Rest Durning Working Hour", date: "May 24, 2018", img: "/vite.svg", userName: "Alex"},
+  { name: "Develop Your Startup Idea", date: "May 24, 2018", img: "/vite.svg", userName: "Alex"},
 ]

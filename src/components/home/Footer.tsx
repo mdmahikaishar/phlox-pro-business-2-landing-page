@@ -34,14 +34,16 @@ export default function Footer() {
         </FooterCard>
 
         <FooterCard name="Location">
-          <div className="w-full h-full bg-greeen-700"></div>
+          <div className="max-w-sm w-full aspect-video bg-red-500 rounded-xl overflow-hidden">
+            <iframe className="w-full h-full" src="https://location.goole.com/dhaka"></iframe>
+          </div>
         </FooterCard>
       </div>
 
-      <div className="p-4 md:p-8 flex items-center justify-between bg-gray-900 text-white">
-        <p className="text-sm text-white/50">@2024 PHOLOX BUISNNES TEHEM.</p>
+      <div className="p-4 md:p-8 flex items-center justify-between gradient-black text-white">
+        <p className="text-xs sm:text-sm text-white/50">@2024 PHOLOX BUISNNES TEHEM.</p>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center sm:gap-2">
           <a className="w-8 h-8 grid place-items-center" href=""><BiLogoFacebook /></a>
           <a className="w-8 h-8 grid place-items-center" href=""><BiLogoTwitter /></a>
           <a className="w-8 h-8 grid place-items-center" href=""><BiLogoPinterest/></a>
@@ -53,8 +55,8 @@ export default function Footer() {
 
 function FooterCard(props: {name: string, children: React.ReactNode}) {
   return (
-    <div className="flex flex-col gap-4">
-      <div className="mb-4 flex flex-col gap-4">
+    <div className="flex flex-col gap-2 sm:gap-4">
+      <div className="mb-4 flex flex-col gap-2 sm:gap-4">
         <h2 className="font-semibold text-2xl">{props.name}</h2>
         <Line />
       </div>
