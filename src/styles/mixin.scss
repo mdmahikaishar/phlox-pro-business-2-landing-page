@@ -1,6 +1,11 @@
 @mixin phone-only {
-    @media (max-width: 600px) { @content; }
+    @media (min-width: 640px) { @content; }
 }
+
+@mixin phone-inside {
+    @media (max-width: 640px) { @content; }
+}
+
 @mixin tablet-only {
-    @media (max-width: 1024px) { @content; }
+    @media (min-width: 768px) { @content; }
 }
